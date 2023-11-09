@@ -47,10 +47,10 @@ header .header-title-line {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  margin: 0 10px 0;
   padding: 0.25rem, 0.5rem;
   flex-flow: nowrap;
   height: 100%;
+  padding: 0 1rem;
 }
 
 header .logo a:any-link {
@@ -177,12 +177,24 @@ main .menu-container {
   background-color: #ffffffc9;
   padding: 2rem;
   box-shadow: 0 0 3px 1px var(--SHADOW-COLOR);
+  min-width: 750px;
+  max-width: 1000px;
+}
+
+@media screen and (max-width: 768px) {
+  main .menu-container {
+    width: 100%;
+    min-width: auto;
+  }
 }
 
 main .main-title-line {
   text-align: center;
   margin: 24px 0 24px;
-  user-select: none;
+  user-select: none; 
+  background: linear-gradient(45deg, var(--MAIN-BGCOLOR-START), var(--MAIN-BGCOLOR-END));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 main nav ul {
@@ -194,8 +206,13 @@ main nav ul {
 
 main nav li {
   padding: 0.5rem;
-  border-top: 1px solid var(--MAIN-COLOR);
   user-select: none;
+}
+
+.border {
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(45deg, var(--MAIN-BGCOLOR-START), var(--MAIN-BGCOLOR-END));
 }
 
 main nav a {
